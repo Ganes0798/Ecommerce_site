@@ -1,0 +1,11 @@
+nav {
+    z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust the styling for smaller screens */
+
+    nav {
+        padding: 10px;
+    }
+}
