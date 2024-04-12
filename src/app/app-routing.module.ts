@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './auth/login/login.component';
-import { SignupComponent } from './auth/signup/signup.component';
-import { CartComponent } from './cart/cart.component';
-import { BecomeSellerComponent } from './become-seller/become-seller.component';
+
 const routes: Routes = [
-{ path: '', component: HomeComponent},
-{path: 'product', component: ProductsComponent},
-{path:'login', component: LoginComponent},
-{path:'signup', component: SignupComponent},
-{path: 'cart', component: CartComponent},
-{path: 'seller', component: BecomeSellerComponent}
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'home', loadChildren: () => import('../app/home/home.module').then(m => m.HomeModule)},
+   { path: 'login', loadChildren: () => import('../app/auth/login/login.module').then(m => m.LoginModule)},
+   { path: 'signup', loadChildren: () => import('../app/auth/signup/signup.module').then(m => m.SignupModule)},
+   
+
+   { path: 'cart', loadChildren: () => import('../app/cart/cart.module').then(m => m.CartModule)},
+   { path: 'seller', loadChildren: () => import('../app/become-seller/become-seller.module').then(m => m.BecomeSellerModule)},
 
 
+   {path:'product', loadChildren: () => import('../app/products/products.module').then(m => m.ProductsModule)},
+   {path:'profile', loadChildren: () => import('../app/profile/profile.module').then(m => m.ProfileModule)}
 ];
 
 @NgModule({
