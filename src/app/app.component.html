@@ -11,47 +11,28 @@
 
 
 
-        <!-- search bar -->
-        <div class="flex flex-col-6 w-full ml-5 mt-2">
-            <div class="flex flex-col w-full">
-
-                <form>
-                    <label for="default-search"
-                        class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
-                            </svg>
-                        </div>
-                        <input type="search" id="default-search"
-                            class="block w-full p-4 ps-10 text-sm text-black border border-blue-500 rounded-lg bg-white"
-                            placeholder="Search Electronics, Products..." required>
-                        <button type="submit"
-                            class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
-                    </div>
-                </form>
-            </div>
-        </div>
+ 
         <!-- end search bar -->
 
         <!-- login -->
         <div class="flex-initial">
             <div class="flex justify-end items-center relative">
                 <div class="flex mr-4 items-center">
-                    <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" [routerLink]="'seller'">
+                    <a class="inline-block py-2 px-3 rounded-full" [routerLink]="'seller'">
                         <div class="flex items-center relative cursor-pointer whitespace-nowrap">Become a Seller</div>
                     </a>
 
-                    <a class="inline-block py-2 px-3 hover:bg-gray-200 rounded-full" [routerLink]="'cart'">
+                    <a class="inline-block py-2 px-3 rounded-full" [routerLink]="'product'">
+                        <div class="flex items-center relative cursor-pointer whitespace-nowrap">Products</div>
+                    </a>
+
+                    <a class="inline-block py-2 px-3 rounded-full" [routerLink]="'cart'">
                         <div class="flex items-center relative cursor-pointer whitespace-nowrap"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="file: mt-2 h-6 w-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                           </svg>Cart</div>
                     </a>
 
-                    <a class="inline-flex py-2 px-3 hover:bg-blue-400 rounded-full" [routerLink]="'login'">
+                    <a class="inline-flex py-2 px-3 hover:bg-blue-500 rounded-full" [routerLink]="'login'">
                         <!-- <img src="/assets/images/image1.jpg" class="w-5 rounded-full" alt="">-->Login 
                     </a>
                 </div>
@@ -61,8 +42,6 @@
     </nav>
 </header>
 <router-outlet></router-outlet>
-
-
 <footer style="background-color: #7C73E6;">
     <div class="mx-auto w-full max-w-screen-xl">
       <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
@@ -72,9 +51,9 @@
                 <li class="mb-4">
                     <a href="#" class=" hover:underline">About</a>
                 </li>
-                <li class="mb-4">
+                <!-- <li class="mb-4">
                     <a href="#" class="hover:underline">Careers</a>
-                </li>
+                </li> -->
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Brand Center</a>
                 </li>
@@ -86,9 +65,6 @@
         <div>
             <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Help center</h2>
             <ul class="text-black font-medium">
-                <li class="mb-4">
-                    <a href="#" class="hover:underline">Discord Server</a>
-                </li>
                 <li class="mb-4">
                     <a href="#" class="hover:underline">Twitter</a>
                 </li>
