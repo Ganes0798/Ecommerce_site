@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ChangeDetectorRef, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,7 +19,6 @@ import { SignupModule } from './auth/signup/signup.module';
     CartModule,
     LoginModule,
     SignupModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
