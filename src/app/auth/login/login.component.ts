@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       google.accounts.id.renderButton(
         // @ts-ignore
         document.getElementById("googleLogin"),
-        { theme: "filled_blue", size: "large", text: 'signin', width: 100 }
+        { theme: "filled_blue", size: "large", text: 'continue_with', width: 100 }
       );
       
       // @ts-ignore

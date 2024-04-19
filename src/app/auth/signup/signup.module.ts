@@ -4,6 +4,7 @@ import { SignupComponent } from './signup.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { SignupRoutingModule } from './signup-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -14,7 +15,8 @@ import { SignupRoutingModule } from './signup-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    SignupRoutingModule
+    SignupRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class SignupModule { }
