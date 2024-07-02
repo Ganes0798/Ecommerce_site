@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   private clientid = environment.clientId;
   loginForm: any;
   localToken: any;
+  loginId: any;
   constructor( private _formBuilder: UntypedFormBuilder,   private _route: Router,
     private _ngZone: NgZone,
     private _loginService: LoginService){
@@ -90,8 +91,9 @@ export class LoginComponent implements OnInit, OnDestroy {
                  {
                   alert(response.message);
                   this.localToken = response.result.token;
-                  console.log(this.localToken);
+                  this.loginId = response.result.id;
                   localStorage.setItem('token', this.localToken);
+                  localStorage.setItem('Id', this.loginId)
                   this._route.navigate(['home']);
                  }
       },

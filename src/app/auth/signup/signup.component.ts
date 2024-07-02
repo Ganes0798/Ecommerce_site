@@ -83,6 +83,7 @@ export class SignupComponent implements OnInit {
           if(response.code == 200 && response.success == true)
           {
             alert(response.message);
+            this.signupForm.reset();
           }
           else{
             alert("Enter Valid Input")

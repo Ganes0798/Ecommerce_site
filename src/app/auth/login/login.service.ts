@@ -31,6 +31,7 @@ export class LoginService {
 
   logoutUser(){
     localStorage.removeItem('token');
+    localStorage.removeItem('Id');
     this.route.navigate(['home']);
   }
 

@@ -14,9 +14,9 @@ export interface CarouselItem {
 export class HomeComponent implements OnInit, OnDestroy {
 
   carouselItems: CarouselItem[] = [
-    { id: 1, imageUrl: 'https://mdbcdn.b-cdn.net/img/new/slides/041.webp', altText: 'Wild Landscape' },
-    { id: 2, imageUrl: 'https://mdbcdn.b-cdn.net/img/new/slides/042.webp', altText: 'Camera' },
-    { id: 3, imageUrl: 'https://mdbcdn.b-cdn.net/img/new/slides/043.webp', altText: 'Exotic Fruits' },
+    { id: 1, imageUrl: '/assets/images/groceriescar.jpg', altText: 'Wild Landscape' },
+    { id: 2, imageUrl: '/assets/images/headphonecar.jpg', altText: 'Camera' },
+    { id: 3, imageUrl: '/assets/images/mobilecar.webp', altText: 'Exotic Fruits' },
     // Add more items as needed
   ];
   currentSlideIndex = 0;
