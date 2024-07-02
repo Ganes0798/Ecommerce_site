@@ -1,1 +1,61 @@
-<p>cart works!</p>
+<ng-container *ngIf="product.length != 0">
+    <div class="container mx-auto px-4 py-8" *ngFor="let cartItems of product; let i = index">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <h1 class="text-2xl font-bold my-4">Shopping Cart</h1>
+           
+        </div>
+        <div class="mt-8">
+            <div class="flex flex-col md:flex-row border-b border-gray-400 py-4">
+                <div class="flex-shrink-0">
+                    <img src={{cartItems.productImageUrl}} alt="Product image" class="w-32 h-32 object-cover">
+                </div>
+                <div class="mt-4 md:mt-0 md:ml-6">
+                    <div class="flex flex-auto justify-between">
+                        <h2 class="text-lg font-bold">{{cartItems.productName}}</h2>
+                    <button (click)="removeItem(cartItems)"><svg class="h-8 w-8 text-red-600"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <line x1="15" y1="9" x2="9" y2="15" />  <line x1="9" y1="9" x2="15" y2="15" /></svg></button>
+                    </div>
+                    <p class="mt-2 text-gray-600">{{cartItems.productDescription}}</p>
+                    <span class="text-2xl font-bold">{{cartItems.quantity}}</span>
+                    <div class="mt-4 flex items-center">
+                        <!-- <span class="mr-2 text-gray-600">Quantity:</span>
+                        <div class="flex items-center">
+                            <button class="bg-gray-200 rounded-l-lg px-2 py-1" disabled>-</button>
+                            <span class="mx-2 text-gray-600">1</span>
+                            <button class="bg-gray-200 rounded-r-lg px-2 py-1" disabled>+</button>
+                        </div> -->
+                        <div class="flex flex-row">
+                            <span class="font-bold">Rs.{{cartItems.productPrice}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="flex flex-col md:flex-row border-b border-gray-400 py-4">
+                <div class="flex-shrink-0">
+                    <img src="https://picsum.photos/id/237/150/150" alt="Product image" class="w-32 h-32 object-cover">
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="flex justify-end items-center mt-8 p-5">
+        <span class="text-gray-600 mr-4 text-3xl">Subtotal: Rs.{{grandTotal}}</span>
+        <button class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+            Order Now
+          </button>
+    </div>
+</ng-container>
+
+
+
+<ng-container class="grid grid-col-12 p-10 overflow-hidden" *ngIf="product.length == 0">
+    <div class="flex justify-center rounded-lg p-5 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)]">
+        <div class="grid grid-col-1 gap-2">
+            <img src="/assets/images/service.jpg" alt="cart">
+            <span class="ml-24">
+                Cart is Empty
+            </span>
+            <div class="ml-24">
+                <button class="p-2 bg-blue-500" [routerLink]="'/product'">Shop Now</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
